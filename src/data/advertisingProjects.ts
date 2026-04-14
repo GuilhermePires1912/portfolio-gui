@@ -16,9 +16,9 @@ export const advertisingProjects: AdvertisingProject[] = [
     categoryPt: 'Trailer & Campanha',
     categoryEn: 'Trailer & Campaign',
     descriptionPt:
-      'Campanha completa da terceira temporada de Os Outros - série original Globoplay. Desenvolvemos trailers, cortes sociais e uma ação especial com os protagonistas Jonas e Mariane para ativação em evento.',
+      'Campanha completa da terceira temporada de Os Outros - série original Globoplay. Desenvolvemos trailers, cortes sociais e uma ação especial com os ex-BBBs Jonas e Maxiane.',
     descriptionEn:
-      'Full campaign for the third season of Os Outros - Globoplay original series. We delivered trailers, social cuts, and a special activation with leads Jonas and Mariane for a live event.',
+      'Full campaign for the third season of Os Outros - Globoplay original series. We delivered trailers, social cuts, and a special activation with ex-BBBs Jonas and Maxiane.',
     thumbnail: '/images/osoutros-kv.jpg',
     thumbnailPosition: 'center 20%',
     kvImages: [
@@ -32,10 +32,10 @@ export const advertisingProjects: AdvertisingProject[] = [
     ],
     principalVideos: ['https://litter.catbox.moe/8joq9h.mp4'], // OS OUTROS T3 TRAILER 120s
     socialVideos: [
-      'https://litter.catbox.moe/1xd7pq.mp4',  // Salutos Esteves TikTok 15s
-      'https://litter.catbox.moe/sgn06g.mp4',  // TikTok POV 9x16
-      'https://litter.catbox.moe/jfre0l.mp4',  // Teaser 1 Social 9x16
-      'https://litter.catbox.moe/qxf63k.mp4',  // OOT3 Portrait
+      'https://litter.catbox.moe/1xd7pq.mp4', // Salutos Esteves TikTok 15s
+      'https://litter.catbox.moe/sgn06g.mp4', // TikTok POV 9x16
+      'https://litter.catbox.moe/jfre0l.mp4', // Teaser 1 Social 9x16
+      'https://litter.catbox.moe/qxf63k.mp4', // OOT3 Portrait
     ],
     featured: true,
     specialAction: {
@@ -63,13 +63,17 @@ export const advertisingProjects: AdvertisingProject[] = [
     descriptionEn:
       'Campaign for the Globoplay original series Turma da Monica Origens, including trailers, social cuts and the special VLT Rio de Janeiro activation project - themed with the series characters.',
     thumbnail: '/images/monica-kv.avif',
-    kvImages: ['/images/monica-kv.avif', '/images/monica-vlt1.jpg', '/images/monica-vlt2.jpg'],
+    kvImages: [
+      '/images/monica-kv.avif',
+      '/images/monica-vlt1.jpg',
+      '/images/monica-vlt2.jpg',
+    ],
     principalVideos: ['https://litter.catbox.moe/1gs4yf.mp4'], // TURMA DA MONICA ORIGENS 120
     socialVideos: [
-      'https://litter.catbox.moe/27j8qm.mp4',  // Turma da Monica 7
-      'https://litter.catbox.moe/gmvzu8.mp4',  // Turma da Monica 70
-      'https://litter.catbox.moe/89thtm.mp4',  // Trilha Fun social 16x9
-      'https://litter.catbox.moe/goaj9f.mp4',  // Trilha Fun 9x16
+      'https://litter.catbox.moe/27j8qm.mp4', // Turma da Monica 7
+      'https://litter.catbox.moe/gmvzu8.mp4', // Turma da Monica 70
+      'https://litter.catbox.moe/89thtm.mp4', // Trilha Fun social 16x9
+      'https://litter.catbox.moe/goaj9f.mp4', // Trilha Fun 9x16
     ],
     featured: true,
     vltProject: {
@@ -99,9 +103,9 @@ export const advertisingProjects: AdvertisingProject[] = [
     kvImages: ['/images/vs-kv-horiz.jpg', '/images/vs-kv-vert.jpg'],
     principalVideos: ['https://files.catbox.moe/b4655l.mp4'], // 60s promo (permanente)
     socialVideos: [
-      'https://litter.catbox.moe/6czger.mp4',  // VS_JANELA OP2
-      'https://litter.catbox.moe/3yv6jj.mp4',  // VS_QUEDA
-      'https://litter.catbox.moe/buy83t.mp4',  // VS_BANHEIRO OP2
+      'https://litter.catbox.moe/6czger.mp4', // VS_JANELA OP2
+      'https://litter.catbox.moe/3yv6jj.mp4', // VS_QUEDA
+      'https://litter.catbox.moe/buy83t.mp4', // VS_BANHEIRO OP2
       null,
     ],
     featured: false,
@@ -123,8 +127,8 @@ export const advertisingProjects: AdvertisingProject[] = [
     kvImages: ['/images/minhamae-kv.jpg', '/images/minhamae-kv2.jpg'],
     principalVideos: ['https://litter.catbox.moe/mlznxa.mp4'], // GPLAY MMCSP T2 30s
     socialVideos: [
-      'https://litter.catbox.moe/nq68bk.mp4',  // MMCSP 9x16 vertical
-      'https://files.catbox.moe/2rrrol.mp4',   // social (permanente)
+      'https://litter.catbox.moe/nq68bk.mp4', // MMCSP 9x16 vertical
+      'https://files.catbox.moe/2rrrol.mp4', // social (permanente)
     ],
     featured: false,
   },
@@ -142,12 +146,15 @@ export const advertisingProjects: AdvertisingProject[] = [
     descriptionEn:
       'Campaign for the fourth season of A Divisão - Globoplay original police drama. Conceptual math-themed social teasers and launch trailer.',
     thumbnail: '/images/a-divisao-kv-horiz.jpg',
-    kvImages: ['/images/a-divisao-kv-horiz.jpg', '/images/a-divisao-kv-vert.png'],
+    kvImages: [
+      '/images/a-divisao-kv-horiz.jpg',
+      '/images/a-divisao-kv-vert.png',
+    ],
     principalVideos: ['https://litter.catbox.moe/i543bh.mp4'], // A DIVISAO 120
     socialVideos: [
-      'https://litter.catbox.moe/7jsdsc.mp4',  // MULT 9x16
-      'https://litter.catbox.moe/3k7red.mp4',  // SUBT 9x16
-      'https://litter.catbox.moe/3j1jqw.mp4',  // SOMA 9x16
+      'https://litter.catbox.moe/7jsdsc.mp4', // MULT 9x16
+      'https://litter.catbox.moe/3k7red.mp4', // SUBT 9x16
+      'https://litter.catbox.moe/3j1jqw.mp4', // SOMA 9x16
     ],
     featured: false,
   },
@@ -165,12 +172,16 @@ export const advertisingProjects: AdvertisingProject[] = [
     descriptionEn:
       'Launch of the first season of Cilada - Globoplay original series. 90s and 60s trailers, plus a full social media package with varied formats.',
     thumbnail: '/images/cilada-kv.png',
-    kvImages: ['/images/cilada-kv.png', '/images/cilada-kv2.png', '/images/cilada-poster.png'],
+    kvImages: [
+      '/images/cilada-kv.png',
+      '/images/cilada-kv2.png',
+      '/images/cilada-poster.png',
+    ],
     principalVideos: ['https://litter.catbox.moe/c2e24i.mp4'], // GPLAY CILADA T1 60s
     socialVideos: [
-      'https://litter.catbox.moe/miypa9.mp4',  // Bruno Cenas 9x16
-      'https://litter.catbox.moe/vp1ehq.mp4',  // Bruno YouTube Bumper
-      'https://litter.catbox.moe/b0fjq0.mp4',  // Bruno Pai Feed 9x16
+      'https://litter.catbox.moe/miypa9.mp4', // Bruno Cenas 9x16
+      'https://litter.catbox.moe/vp1ehq.mp4', // Bruno YouTube Bumper
+      'https://litter.catbox.moe/b0fjq0.mp4', // Bruno Pai Feed 9x16
       null,
     ],
     featured: false,
@@ -189,12 +200,16 @@ export const advertisingProjects: AdvertisingProject[] = [
     descriptionEn:
       'Campaign for the Raul Seixas musical special - Globoplay original content. Epic widescreen trailer, 60s TV and social versions, plus vertical cuts for social media.',
     thumbnail: '/images/raul-kv.jpg',
-    kvImages: ['/images/raul-kv.jpg', '/images/raul-kv-noite.jpg', '/images/raul-kv-dia.jpg'],
+    kvImages: [
+      '/images/raul-kv.jpg',
+      '/images/raul-kv-noite.jpg',
+      '/images/raul-kv-dia.jpg',
+    ],
     principalVideos: ['https://litter.catbox.moe/t3tqsb.mp4'], // TRAILER RAUL 3MIN TELÃO
     socialVideos: [
-      'https://litter.catbox.moe/qn9gak.mp4',  // Raul Reacts 60s
-      'https://files.catbox.moe/ftybzt.mp4',   // Raul social (permanente)
-      'https://litter.catbox.moe/gt5kdm.mp4',  // 30s 9x16
+      'https://litter.catbox.moe/qn9gak.mp4', // Raul Reacts 60s
+      'https://files.catbox.moe/ftybzt.mp4', // Raul social (permanente)
+      'https://litter.catbox.moe/gt5kdm.mp4', // 30s 9x16
     ],
     featured: false,
   },
