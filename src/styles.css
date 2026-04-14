@@ -267,9 +267,8 @@ section {
 }
 
 .hero-inner {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  padding: 80px 24px;
+  width: 100%;
+  padding: 80px 48px;
   position: relative;
   z-index: 1;
 }
