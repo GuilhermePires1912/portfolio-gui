@@ -69,7 +69,7 @@ export const Hero: React.FC<HeroProps> = ({ t }) => {
                     <img
                       src={brand.logo}
                       alt={brand.name}
-                      className={`hero-brand-logo${brand.logoLight ? ' logo-invert' : ''}`}
+                      className="hero-brand-logo"
                     />
                   </div>
                   <span className="hero-brand-sub">{brand.sub}</span>

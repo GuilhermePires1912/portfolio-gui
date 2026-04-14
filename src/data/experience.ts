@@ -67,11 +67,11 @@ export const experiences: Record<Language, ExperienceItem[]> = {
 };
 
 export const brands = [
-  { name: 'Globo',       sub: 'TV & Mídia',     logo: '/logos/globo.svg',     logoLight: true },
-  { name: 'Globoplay',   sub: 'Streaming',       logo: '/logos/globoplay.svg', logoLight: true },
-  { name: 'Meta',        sub: 'Tech / Social',   logo: '/logos/meta.svg',      logoLight: false },
-  { name: 'SporTV',      sub: 'Sports TV',       logo: '/logos/sportv.svg',    logoLight: true },
-  { name: 'Nação',       sub: 'Sócio Flamengo',  logo: '/logos/flamengo.svg',  logoLight: false },
-  { name: 'Gigante',     sub: 'Sócio Vasco',     logo: '/logos/vasco.svg',     logoLight: false },
-  { name: 'Golden Goal', sub: 'Football',        logo: '/logos/goldengol.svg', logoLight: false },
+  { name: 'Globo',       sub: 'TV & Mídia',     logo: '/logos/globo.png'     },
+  { name: 'Globoplay',   sub: 'Streaming',       logo: '/logos/globoplay.png' },
+  { name: 'Meta',        sub: 'Tech / Social',   logo: '/logos/meta.png'      },
+  { name: 'SporTV',      sub: 'Sports TV',       logo: '/logos/sportv.png'    },
+  { name: 'Nação',       sub: 'Sócio Flamengo',  logo: '/logos/flamengo.png'  },
+  { name: 'Gigante',     sub: 'Sócio Vasco',     logo: '/logos/vasco.png'     },
+  { name: 'Golden Goal', sub: 'Football',        logo: '/logos/goldengol.png' },
 ];
