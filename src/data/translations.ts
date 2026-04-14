@@ -141,7 +141,7 @@ export const translations: Record<'pt' | 'en', TranslationStrings> = {
     work: {
       title: 'Campaigns',
       subtitle: 'Advertising and communication projects at Globoplay',
-      watchVideo: 'Watch Video',
+      watchVideo: 'Learn more',
       principal: 'Main Video',
       socialDigital: 'Social & Digital',
       specialAction: 'Special Activation',

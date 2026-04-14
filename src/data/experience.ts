@@ -69,6 +69,6 @@ export const experiences: Record<Language, ExperienceItem[]> = {
 export const brands = [
   { name: 'Globo',     logo: '/logos/globo.png'     },
   { name: 'Globoplay', logo: '/logos/globoplay.png' },
-  { name: 'Meta',      logo: '/logos/meta.png'      },
+  { name: 'Meta',      logo: '/logos/meta-white.svg' },
   { name: 'SporTV',    logo: '/logos/sportv.png'    },
 ];

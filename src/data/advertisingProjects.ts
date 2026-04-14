@@ -21,7 +21,15 @@ export const advertisingProjects: AdvertisingProject[] = [
       'Full campaign for the third season of Os Outros - Globoplay original series. We delivered trailers, social cuts, and a special activation with leads Jonas and Mariane for a live event.',
     thumbnail: '/images/osoutros-kv.jpg',
     thumbnailPosition: 'center 20%',
-    kvImages: ['/images/osoutros-kv.jpg'],
+    kvImages: [
+      '/images/osoutros-kv.jpg',
+      '/images/osoutros-dupla-01_120x68cm.png',
+      '/images/osoutros-dupla-02_120x68cm.jpg',
+      '/images/osoutros-trio-03_120x68cm.jpg',
+      '/images/osoutros-grupo-04_120x68cm.jpg',
+      '/images/osoutros-grupo-05_120x68cm.jpg',
+      '/images/osoutros-grupo-06_120x68cm.jpg',
+    ],
     principalVideos: ['https://litter.catbox.moe/8joq9h.mp4'], // OS OUTROS T3 TRAILER 120s
     socialVideos: [
       'https://litter.catbox.moe/1xd7pq.mp4',  // Salutos Esteves TikTok 15s
@@ -55,7 +63,7 @@ export const advertisingProjects: AdvertisingProject[] = [
     descriptionEn:
       'Campaign for the Globoplay original series Turma da Monica Origens, including trailers, social cuts and the special VLT Rio de Janeiro activation project - themed with the series characters.',
     thumbnail: '/images/monica-kv.avif',
-    kvImages: ['/images/monica-kv.avif'],
+    kvImages: ['/images/monica-kv.avif', '/images/monica-vlt1.jpg', '/images/monica-vlt2.jpg'],
     principalVideos: ['https://litter.catbox.moe/1gs4yf.mp4'], // TURMA DA MONICA ORIGENS 120
     socialVideos: [
       'https://litter.catbox.moe/27j8qm.mp4',  // Turma da Monica 7
@@ -87,8 +95,8 @@ export const advertisingProjects: AdvertisingProject[] = [
       'Campanha da série original Globoplay Vermelho Sangue - thriller de suspense com trailers de impacto e cortes verticais para redes sociais.',
     descriptionEn:
       'Campaign for the Globoplay original thriller series Vermelho Sangue - high-impact trailers and vertical social cuts.',
-    thumbnail: '/images/vs-kv.jpg',
-    kvImages: ['/images/vs-kv.jpg'],
+    thumbnail: '/images/vs-kv-horiz.jpg',
+    kvImages: ['/images/vs-kv-horiz.jpg', '/images/vs-kv-vert.jpg'],
     principalVideos: ['https://files.catbox.moe/b4655l.mp4'], // 60s promo (permanente)
     socialVideos: [
       'https://litter.catbox.moe/6czger.mp4',  // VS_JANELA OP2
@@ -112,7 +120,7 @@ export const advertisingProjects: AdvertisingProject[] = [
     descriptionEn:
       'Second season of the Globoplay original romantic comedy series. Launch trailers, performance cuts and social media - including the most impactful vertical format of the season.',
     thumbnail: '/images/minhamae-kv.jpg',
-    kvImages: ['/images/minhamae-kv.jpg'],
+    kvImages: ['/images/minhamae-kv.jpg', '/images/minhamae-kv2.jpg'],
     principalVideos: ['https://litter.catbox.moe/mlznxa.mp4'], // GPLAY MMCSP T2 30s
     socialVideos: [
       'https://litter.catbox.moe/nq68bk.mp4',  // MMCSP 9x16 vertical
@@ -133,8 +141,8 @@ export const advertisingProjects: AdvertisingProject[] = [
       'Campanha da quarta temporada de A Divisão - série policial original Globoplay. Teasers matemáticos conceituais para redes sociais e trailer de lançamento.',
     descriptionEn:
       'Campaign for the fourth season of A Divisão - Globoplay original police drama. Conceptual math-themed social teasers and launch trailer.',
-    thumbnail: '/images/a-divisao-kv.jpg',
-    kvImages: ['/images/a-divisao-kv.jpg'],
+    thumbnail: '/images/a-divisao-kv-horiz.jpg',
+    kvImages: ['/images/a-divisao-kv-horiz.jpg', '/images/a-divisao-kv-vert.png'],
     principalVideos: ['https://litter.catbox.moe/i543bh.mp4'], // A DIVISAO 120
     socialVideos: [
       'https://litter.catbox.moe/7jsdsc.mp4',  // MULT 9x16
@@ -157,7 +165,7 @@ export const advertisingProjects: AdvertisingProject[] = [
     descriptionEn:
       'Launch of the first season of Cilada - Globoplay original series. 90s and 60s trailers, plus a full social media package with varied formats.',
     thumbnail: '/images/cilada-kv.png',
-    kvImages: ['/images/cilada-kv.png'],
+    kvImages: ['/images/cilada-kv.png', '/images/cilada-kv2.png', '/images/cilada-poster.png'],
     principalVideos: ['https://litter.catbox.moe/c2e24i.mp4'], // GPLAY CILADA T1 60s
     socialVideos: [
       'https://litter.catbox.moe/miypa9.mp4',  // Bruno Cenas 9x16
@@ -181,7 +189,7 @@ export const advertisingProjects: AdvertisingProject[] = [
     descriptionEn:
       'Campaign for the Raul Seixas musical special - Globoplay original content. Epic widescreen trailer, 60s TV and social versions, plus vertical cuts for social media.',
     thumbnail: '/images/raul-kv.jpg',
-    kvImages: ['/images/raul-kv.jpg'],
+    kvImages: ['/images/raul-kv.jpg', '/images/raul-kv-noite.jpg', '/images/raul-kv-dia.jpg'],
     principalVideos: ['https://litter.catbox.moe/t3tqsb.mp4'], // TRAILER RAUL 3MIN TELÃO
     socialVideos: [
       'https://litter.catbox.moe/qn9gak.mp4',  // Raul Reacts 60s

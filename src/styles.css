@@ -1,8 +1,8 @@
 /* ─────────────────────────────────────────────────────────────────────────────
    GUILHERME PIRES — PORTFOLIO
-   Design: Retro Editorial Advertising × Modern Dev
-   Fonts: Playfair Display (display) + Space Mono (code) + Work Sans (body)
-   Palette: Near-black bg, Golden yellow, Bold red, Terminal green
+   Design: Modern Agency × Bold Orange × Black
+   Fonts: Syne (display) + Space Mono (code) + Inter (body)
+   Palette: True black bg, Vivid orange, Terminal green
    ───────────────────────────────────────────────────────────────────────────── */
 
 /* ── Reset & Base ──────────────────────────────────────────────────────────── */
@@ -14,29 +14,29 @@
 
 :root {
   /* Fonts */
-  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-display: 'Syne', system-ui, sans-serif;
   --font-mono: 'Space Mono', 'Courier New', Courier, monospace;
-  --font-body: 'Work Sans', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
 
   /* Core palette */
-  --bg: #0d0d0d;
-  --bg-surface: #141414;
-  --bg-card: #1a1a1a;
-  --bg-card-hover: #212121;
-  --bg-modal: #111111;
+  --bg: #080808;
+  --bg-surface: #111111;
+  --bg-card: #161616;
+  --bg-card-hover: #1e1e1e;
+  --bg-modal: #0d0d0d;
 
   --border: rgba(255, 255, 255, 0.07);
-  --border-strong: rgba(255, 255, 255, 0.14);
-  --border-accent: rgba(245, 197, 24, 0.4);
+  --border-strong: rgba(255, 255, 255, 0.13);
+  --border-accent: rgba(255, 85, 0, 0.4);
 
-  --text: #f0ece4;
-  --text-muted: #7a7570;
-  --text-dim: #4a4642;
+  --text: #f2f0ed;
+  --text-muted: #787470;
+  --text-dim: #444240;
 
   /* Accent colors */
-  --yellow: #f5c518;
-  --yellow-dim: rgba(245, 197, 24, 0.12);
-  --yellow-glow: rgba(245, 197, 24, 0.25);
+  --yellow: #FF5500;
+  --yellow-dim: rgba(255, 85, 0, 0.10);
+  --yellow-glow: rgba(255, 85, 0, 0.28);
   --red: #e63946;
   --red-dim: rgba(230, 57, 70, 0.12);
   --green: #06d6a0;
@@ -44,14 +44,14 @@
   --green-glow: rgba(6, 214, 160, 0.2);
 
   /* Shadows */
-  --shadow-card: 0 2px 16px rgba(0, 0, 0, 0.5);
-  --shadow-hover: 0 8px 40px rgba(0, 0, 0, 0.7);
-  --shadow-modal: 0 24px 80px rgba(0, 0, 0, 0.9);
+  --shadow-card: 0 2px 16px rgba(0, 0, 0, 0.6);
+  --shadow-hover: 0 8px 40px rgba(0, 0, 0, 0.8);
+  --shadow-modal: 0 24px 80px rgba(0, 0, 0, 0.95);
 
   /* Layout */
   --radius: 3px;
-  --radius-card: 6px;
-  --radius-lg: 12px;
+  --radius-card: 4px;
+  --radius-lg: 8px;
   --transition: 0.24s cubic-bezier(0.16, 1, 0.3, 1);
   --max-w: 1200px;
   --header-h: 68px;
@@ -89,9 +89,9 @@ a {
 /* ── Typography helpers ────────────────────────────────────────────────────── */
 .display {
   font-family: var(--font-display);
-  font-weight: 900;
+  font-weight: 800;
   line-height: 1.05;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
 }
 
 .mono {
@@ -141,9 +141,9 @@ section {
 
 .section-title {
   font-family: var(--font-display);
-  font-size: clamp(2.4rem, 5vw, 4rem);
-  font-weight: 900;
-  line-height: 1.05;
+  font-size: clamp(2.6rem, 5vw, 4.2rem);
+  font-weight: 800;
+  line-height: 1.0;
   letter-spacing: -0.02em;
 }
 
@@ -163,7 +163,7 @@ section {
   right: 0;
   z-index: 100;
   height: var(--header-h);
-  background: rgba(13, 13, 13, 0.88);
+  background: rgba(8, 8, 8, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
@@ -181,9 +181,9 @@ section {
 
 .header-logo {
   font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 900;
-  letter-spacing: -0.02em;
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
   color: var(--text);
 }
 
@@ -251,6 +251,7 @@ section {
   display: flex;
   align-items: center;
   padding-top: var(--header-h);
+  padding-bottom: 48px;
   position: relative;
   overflow: hidden;
   border-bottom: 1px solid var(--border);
@@ -261,7 +262,7 @@ section {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   background:
-    radial-gradient(ellipse 60% 50% at 80% 50%, rgba(245, 197, 24, 0.04) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 50% at 80% 50%, rgba(255, 85, 0, 0.05) 0%, transparent 70%),
     radial-gradient(ellipse 40% 60% at 10% 80%, rgba(6, 214, 160, 0.03) 0%, transparent 70%);
   pointer-events: none;
 }
@@ -305,17 +306,16 @@ section {
 
 .hero-name {
   font-family: var(--font-display);
-  font-size: clamp(3.5rem, 8vw, 7.5rem);
-  font-weight: 900;
-  line-height: 0.92;
-  letter-spacing: -0.03em;
+  font-size: clamp(3.8rem, 8vw, 8rem);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
   margin-bottom: 24px;
 }
 
 .hero-name .line2 {
   display: block;
   color: var(--yellow);
-  font-style: italic;
 }
 
 .hero-roles {
@@ -387,7 +387,7 @@ section {
 }
 
 .btn-primary:hover {
-  background: #ffd32a;
+  background: #FF7733;
   transform: translateY(-2px);
   box-shadow: 0 8px 24px var(--yellow-glow);
 }
@@ -417,6 +417,7 @@ section {
 /* ── Work Section (Advertising) ────────────────────────────────────────────── */
 .work-section {
   background: var(--bg);
+  padding-top: 48px;
 }
 
 .work-section .section-label {
@@ -440,6 +441,12 @@ section {
   grid-template-columns: 2fr 1fr;
   gap: 2px;
   margin-bottom: 2px;
+  align-items: stretch;
+}
+
+/* Second card in featured row has no fixed ratio — stretches to match the featured card height */
+.projects-featured .project-card:not(.featured) {
+  aspect-ratio: unset;
 }
 
 .projects-regular {
@@ -478,8 +485,8 @@ section {
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(13, 13, 13, 0.95) 0%,
-    rgba(13, 13, 13, 0.4) 50%,
+    rgba(0, 0, 0, 0.96) 0%,
+    rgba(0, 0, 0, 0.45) 50%,
     rgba(13, 13, 13, 0) 100%
   );
   display: flex;
@@ -492,8 +499,8 @@ section {
 .project-card:hover .project-card-overlay {
   background: linear-gradient(
     to top,
-    rgba(13, 13, 13, 0.98) 0%,
-    rgba(13, 13, 13, 0.6) 60%,
+    rgba(0, 0, 0, 0.97) 0%,
+    rgba(0, 0, 0, 0.65) 60%,
     rgba(13, 13, 13, 0.1) 100%
   );
 }
@@ -510,14 +517,14 @@ section {
 
 .project-card-title {
   font-family: var(--font-display);
-  font-size: 1.35rem;
-  font-weight: 900;
-  line-height: 1.1;
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.05;
   margin-bottom: 6px;
 }
 
 .project-card.featured .project-card-title {
-  font-size: 1.75rem;
+  font-size: 1.9rem;
 }
 
 .project-card-client {
@@ -684,7 +691,7 @@ section {
 
 .modal-tag.category {
   color: var(--yellow);
-  border-color: rgba(245, 197, 24, 0.4);
+  border-color: rgba(255, 85, 0, 0.4);
   background: var(--yellow-dim);
 }
 
@@ -700,9 +707,9 @@ section {
 
 .modal-title {
   font-family: var(--font-display);
-  font-size: 2.2rem;
-  font-weight: 900;
-  line-height: 1.1;
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 1.0;
   letter-spacing: -0.02em;
   margin-bottom: 16px;
 }
@@ -823,15 +830,15 @@ section {
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(13, 13, 13, 0.5) 0%,
-    rgba(13, 13, 13, 0.2) 50%,
-    rgba(13, 13, 13, 0.6) 100%
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.25) 50%,
+    rgba(0, 0, 0, 0.65) 100%
   );
   transition: background 0.3s ease;
 }
 
 .vp-cover:hover .vp-overlay {
-  background: rgba(13, 13, 13, 0.35);
+  background: rgba(0, 0, 0, 0.38);
 }
 
 /* Zoom the video frame on hover (via its sibling) */
@@ -870,15 +877,15 @@ section {
   color: #0d0d0d;
   padding-left: 5px; /* optical nudge for triangle */
   box-shadow:
-    0 0 0 0px rgba(245, 197, 24, 0.35),
+    0 0 0 0px rgba(255, 85, 0, 0.35),
     0 8px 32px rgba(0, 0, 0, 0.55);
   transition: box-shadow 0.25s ease, background 0.25s ease;
 }
 
 .vp-cover:hover .vp-play-icon {
-  background: #ffd32a;
+  background: #FF7733;
   box-shadow:
-    0 0 0 10px rgba(245, 197, 24, 0.22),
+    0 0 0 10px rgba(255, 85, 0, 0.22),
     0 12px 40px rgba(0, 0, 0, 0.65);
 }
 
@@ -903,6 +910,56 @@ section {
   text-transform: uppercase;
 }
 
+/* ── Video Lightbox ──────────────────────────────────────────────────────── */
+.vlb-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.vlb-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+}
+
+.vlb-container.vlb-vertical {
+  max-width: 400px;
+}
+
+.vlb-video {
+  width: 100%;
+  display: block;
+  border-radius: var(--radius-card);
+  background: #000;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.vlb-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.4rem;
+  cursor: pointer;
+  opacity: 0.75;
+  transition: opacity 0.2s;
+  line-height: 1;
+  padding: 4px 8px;
+}
+
+.vlb-close:hover {
+  opacity: 1;
+}
+
 /* Social grid: auto columns for vertical videos */
 .social-video-grid {
   display: grid;
@@ -912,8 +969,8 @@ section {
 
 /* Special action section */
 .special-action {
-  background: linear-gradient(135deg, rgba(245, 197, 24, 0.06) 0%, transparent 60%);
-  border: 1px solid rgba(245, 197, 24, 0.2);
+  background: linear-gradient(135deg, rgba(255, 85, 0, 0.06) 0%, transparent 60%);
+  border: 1px solid rgba(255, 85, 0, 0.2);
   border-radius: var(--radius-card);
   padding: 24px;
   margin-bottom: 40px;
@@ -1057,8 +1114,8 @@ section {
 .dev-card-name {
   font-family: var(--font-display);
   font-size: 1.2rem;
-  font-weight: 700;
-  line-height: 1.2;
+  font-weight: 800;
+  line-height: 1.1;
   margin-bottom: 4px;
 }
 
@@ -1161,7 +1218,7 @@ section {
   border-bottom: 1px solid var(--border);
 }
 
-.skills-block.advertising h4 { color: var(--yellow); border-color: rgba(245, 197, 24, 0.3); }
+.skills-block.advertising h4 { color: var(--yellow); border-color: rgba(255, 85, 0, 0.3); }
 .skills-block.dev-skills h4 { color: var(--green); border-color: rgba(6, 214, 160, 0.3); }
 
 .skills-list {
@@ -1183,7 +1240,7 @@ section {
 
 .advertising .skill-tag {
   color: var(--yellow);
-  border-color: rgba(245, 197, 24, 0.25);
+  border-color: rgba(255, 85, 0, 0.25);
   background: var(--yellow-dim);
 }
 
@@ -1231,9 +1288,9 @@ section {
 
 .contact-headline {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: 900;
-  line-height: 1.05;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.0;
   letter-spacing: -0.02em;
   margin-bottom: 16px;
 }
@@ -1301,8 +1358,8 @@ section {
 
 /* Dot-grid background pattern */
 .hero {
-  background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
-  background-size: 28px 28px;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
 }
 
 /* Top editorial rule */
@@ -1431,7 +1488,7 @@ section {
 }
 
 .exp-item:hover {
-  background: rgba(245, 197, 24, 0.02);
+  background: rgba(255, 85, 0, 0.02);
 }
 
 .exp-left {
@@ -1476,7 +1533,7 @@ section {
   text-transform: uppercase;
   color: var(--yellow);
   padding: 3px 8px;
-  border: 1px solid rgba(245, 197, 24, 0.35);
+  border: 1px solid rgba(255, 85, 0, 0.35);
   border-radius: 2px;
   background: var(--yellow-dim);
   align-self: flex-start;
@@ -1490,9 +1547,9 @@ section {
 
 .exp-company {
   font-family: var(--font-display);
-  font-size: 1.35rem;
-  font-weight: 900;
-  line-height: 1.1;
+  font-size: 1.4rem;
+  font-weight: 800;
+  line-height: 1.0;
   letter-spacing: -0.01em;
 }
 

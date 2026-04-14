@@ -13,9 +13,10 @@ interface VideoPlayerProps {
   src: string;
   fallbackPoster: string;
   vertical?: boolean;
+  onOpenLightbox?: (src: string) => void;
 }
 
-const VideoPlayer: React.FC<VideoPlayerProps> = ({ src, fallbackPoster, vertical }) => {
+const VideoPlayer: React.FC<VideoPlayerProps> = ({ src, fallbackPoster, vertical, onOpenLightbox }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(false);
   const [frameReady, setFrameReady] = useState(false);
@@ -34,13 +35,17 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ src, fallbackPoster, vertical
   }, [playing]);
 
   const handlePlay = useCallback(() => {
+    if (onOpenLightbox) {
+      onOpenLightbox(src);
+      return;
+    }
     const v = videoRef.current;
     if (!v) return;
     setPlaying(true);
     v.muted = false;
     v.currentTime = 0;
     v.play().catch(() => {});
-  }, []);
+  }, [onOpenLightbox, src]);
 
   return (
     <div className={`vp-wrap${vertical ? ' vp-vertical' : ''}`}>
@@ -78,11 +83,48 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ src, fallbackPoster, vertical
   );
 };
 
+// ── Video Lightbox ────────────────────────────────────────────────────────────
+interface VideoLightboxProps {
+  src: string;
+  vertical: boolean;
+  onClose: () => void;
+}
+
+const VideoLightbox: React.FC<VideoLightboxProps> = ({ src, vertical, onClose }) => {
+  const backdropRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [onClose]);
+
+  return (
+    <div
+      className="vlb-backdrop"
+      ref={backdropRef}
+      onClick={(e) => { if (e.target === backdropRef.current) onClose(); }}
+    >
+      <div className={`vlb-container${vertical ? ' vlb-vertical' : ''}`}>
+        <button className="vlb-close" onClick={onClose} aria-label="Fechar">✕</button>
+        <video
+          src={src}
+          autoPlay
+          controls
+          playsInline
+          className="vlb-video"
+        />
+      </div>
+    </div>
+  );
+};
+
 // ── Modal ────────────────────────────────────────────────────────────────────
 export const ProjectModal: React.FC<ProjectModalProps> = ({
   project, t, language, onClose
 }) => {
   const backdropRef = useRef<HTMLDivElement>(null);
+  const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
   const title = language === 'pt' ? project.titlePt : project.titleEn;
   const category = language === 'pt' ? project.categoryPt : project.categoryEn;
   const description = language === 'pt' ? project.descriptionPt : project.descriptionEn;
@@ -107,6 +149,14 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
   }, [onClose]);
 
   return (
+    <>
+    {lightboxSrc && (
+      <VideoLightbox
+        src={lightboxSrc}
+        vertical={isVertical(lightboxSrc)}
+        onClose={() => setLightboxSrc(null)}
+      />
+    )}
     <div className="modal-backdrop" ref={backdropRef} onClick={handleBackdropClick}>
       <div className="modal" role="dialog" aria-modal="true" aria-label={title}>
         <button className="modal-close" onClick={onClose} aria-label={t.work.close}>✕</button>
@@ -201,7 +251,13 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
             ) : (
               <div className="social-video-grid">
                 {validSocial.map((v, i) => (
-                  <VideoPlayer key={i} src={v} fallbackPoster={fallback} vertical={isVertical(v)} />
+                  <VideoPlayer
+                    key={i}
+                    src={v}
+                    fallbackPoster={fallback}
+                    vertical={isVertical(v)}
+                    onOpenLightbox={setLightboxSrc}
+                  />
                 ))}
               </div>
             )}
@@ -221,5 +277,6 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
         </div>
       </div>
     </div>
+    </>
   );
 };

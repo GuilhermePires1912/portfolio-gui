@@ -13,8 +13,6 @@ export const ContactSection: React.FC<ContactProps> = ({ t }) => {
           <div>
             <h2 className="contact-headline">
               {t.contact.title}
-              <br />
-              <em>{t.contact.subtitle}</em>
             </h2>
 
             <div className="contact-info">
