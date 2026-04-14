@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <circle cx="60" cy="60" r="54" fill="#1a1a1a" stroke="#d4a800" stroke-width="4"/>
+  <circle cx="60" cy="60" r="38" fill="none" stroke="#d4a800" stroke-width="2"/>
+  <!-- pentagon pattern simplified -->
+  <polygon points="60,22 76,34 70,52 50,52 44,34" fill="none" stroke="#d4a800" stroke-width="1.5"/>
+  <polygon points="60,34 70,41 66,52 54,52 50,41" fill="#d4a800" opacity="0.15"/>
+  <text x="60" y="78" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="700" fill="#d4a800" letter-spacing="1">GOLDEN</text>
+  <text x="60" y="89" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="700" fill="#d4a800" letter-spacing="1">GOAL</text>
+</svg>

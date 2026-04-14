@@ -67,11 +67,11 @@ export const experiences: Record<Language, ExperienceItem[]> = {
 };
 
 export const brands = [
-  { name: 'Globo', sub: 'TV & Mídia' },
-  { name: 'Globoplay', sub: 'Streaming' },
-  { name: 'Meta', sub: 'Tech / Social' },
-  { name: 'SporTV', sub: 'Sports TV' },
-  { name: 'Nação', sub: 'Sócio Flamengo' },
-  { name: 'Gigante', sub: 'Sócio Vasco' },
-  { name: 'Golden Goal', sub: 'Football' },
+  { name: 'Globo',       sub: 'TV & Mídia',     logo: '/logos/globo.svg',     logoLight: true },
+  { name: 'Globoplay',   sub: 'Streaming',       logo: '/logos/globoplay.svg', logoLight: true },
+  { name: 'Meta',        sub: 'Tech / Social',   logo: '/logos/meta.svg',      logoLight: false },
+  { name: 'SporTV',      sub: 'Sports TV',       logo: '/logos/sportv.svg',    logoLight: true },
+  { name: 'Nação',       sub: 'Sócio Flamengo',  logo: '/logos/flamengo.svg',  logoLight: false },
+  { name: 'Gigante',     sub: 'Sócio Vasco',     logo: '/logos/vasco.svg',     logoLight: false },
+  { name: 'Golden Goal', sub: 'Football',        logo: '/logos/goldengol.svg', logoLight: false },
 ];

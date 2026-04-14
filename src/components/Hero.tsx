@@ -6,9 +6,6 @@ interface HeroProps {
   t: TranslationStrings;
 }
 
-// Duplicate brands for seamless marquee loop
-const marqueeItems = [...brands, ...brands, ...brands];
-
 export const Hero: React.FC<HeroProps> = ({ t }) => {
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
@@ -62,40 +59,23 @@ export const Hero: React.FC<HeroProps> = ({ t }) => {
             </div>
           </div>
 
-          {/* Right: stats panel */}
-          <div className="hero-stats-panel">
-            <div className="hero-stat-item">
-              <div className="stat-value">{t.hero.stat1Value}</div>
-              <div className="stat-label">{t.hero.stat1Label}</div>
+          {/* Right: brands vertical list */}
+          <div className="hero-brands-panel">
+            <div className="hero-brands-label">{t.hero.brandsLabel}</div>
+            <div className="hero-brands-list">
+              {brands.map((brand) => (
+                <div className="hero-brand-row" key={brand.name}>
+                  <div className="hero-brand-logo-wrap">
+                    <img
+                      src={brand.logo}
+                      alt={brand.name}
+                      className={`hero-brand-logo${brand.logoLight ? ' logo-invert' : ''}`}
+                    />
+                  </div>
+                  <span className="hero-brand-sub">{brand.sub}</span>
+                </div>
+              ))}
             </div>
-            <div className="hero-stat-divider" />
-            <div className="hero-stat-item">
-              <div className="stat-value">{t.hero.stat2Value}</div>
-              <div className="stat-label">{t.hero.stat2Label}</div>
-            </div>
-            <div className="hero-stat-divider" />
-            <div className="hero-stat-item">
-              <div className="stat-value">{t.hero.stat3Value}</div>
-              <div className="stat-label">{t.hero.stat3Label}</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Brands marquee strip */}
-      <div className="brands-strip">
-        <div className="brands-strip-label">
-          <span>{t.hero.brandsLabel}</span>
-          <span className="brands-arrow">→</span>
-        </div>
-        <div className="brands-marquee">
-          <div className="brands-track">
-            {marqueeItems.map((brand, i) => (
-              <div className="brand-item" key={i}>
-                <span className="brand-name">{brand.name}</span>
-                <span className="brand-sub">{brand.sub}</span>
-              </div>
-            ))}
           </div>
         </div>
       </div>
