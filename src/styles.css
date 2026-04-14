@@ -1298,6 +1298,375 @@ section {
   color: var(--text-dim);
 }
 
+/* ── Hero Redesign ─────────────────────────────────────────────────────────── */
+
+/* Dot-grid background pattern */
+.hero {
+  background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Top editorial rule */
+.hero-top-rule {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 28px;
+  margin-bottom: 48px;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.hero-top-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--yellow);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  flex-shrink: 0;
+}
+
+.hero-location {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.hero-year {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--text-dim);
+}
+
+/* Two-column main layout */
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 64px;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+/* Override old single-column hero-inner padding */
+.hero-inner {
+  padding-bottom: 0;
+}
+
+/* Stats panel on right */
+.hero-stats-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  overflow: hidden;
+  min-width: 180px;
+  background: rgba(20, 20, 20, 0.6);
+  backdrop-filter: blur(8px);
+  flex-shrink: 0;
+}
+
+.hero-stat-item {
+  padding: 22px 28px;
+  text-align: center;
+  position: relative;
+}
+
+.hero-stat-item:hover {
+  background: rgba(245, 197, 24, 0.05);
+}
+
+.stat-value {
+  font-family: var(--font-display);
+  font-size: 2.6rem;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--yellow);
+  letter-spacing: -0.03em;
+  margin-bottom: 6px;
+}
+
+.stat-label {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.hero-stat-divider {
+  height: 1px;
+  background: var(--border-strong);
+}
+
+/* ── Brands Marquee Strip ──────────────────────────────────────────────────── */
+.brands-strip {
+  border-top: 1px solid var(--border-strong);
+  margin-top: 64px;
+  padding: 0;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+.brands-strip-label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 4px;
+  padding: 20px 28px;
+  background: var(--yellow);
+  color: #0d0d0d;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  white-space: nowrap;
+  line-height: 1.3;
+}
+
+.brands-arrow {
+  font-size: 1rem;
+  letter-spacing: 0;
+}
+
+.brands-marquee {
+  flex: 1;
+  overflow: hidden;
+  border-left: 1px solid var(--border-strong);
+  display: flex;
+  align-items: center;
+  background: rgba(20, 20, 20, 0.4);
+}
+
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}
+
+.brands-track {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  animation: marquee-scroll 22s linear infinite;
+  width: max-content;
+}
+
+.brands-track:hover {
+  animation-play-state: paused;
+}
+
+.brand-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 16px 36px;
+  border-right: 1px solid var(--border);
+  transition: background var(--transition);
+  cursor: default;
+}
+
+.brand-item:hover {
+  background: rgba(245, 197, 24, 0.06);
+}
+
+.brand-name {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  color: var(--text);
+  white-space: nowrap;
+  transition: color var(--transition);
+}
+
+.brand-item:hover .brand-name {
+  color: var(--yellow);
+}
+
+.brand-sub {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+
+/* ── Experience Timeline ───────────────────────────────────────────────────── */
+.exp-section {
+  margin: 56px 0;
+  padding: 40px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.exp-section-header {
+  margin-bottom: 32px;
+}
+
+.exp-section-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.exp-section-label::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 2px;
+  background: var(--yellow);
+}
+
+.exp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.exp-item {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 32px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--border);
+  transition: background var(--transition);
+}
+
+.exp-item:last-child {
+  border-bottom: none;
+}
+
+.exp-item:hover {
+  background: rgba(245, 197, 24, 0.02);
+}
+
+.exp-left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 4px;
+}
+
+.exp-period-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.exp-accent {
+  display: block;
+  width: 3px;
+  height: 16px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.exp-accent-yellow { background: var(--yellow); }
+.exp-accent-green  { background: var(--green); }
+.exp-accent-muted  { background: var(--text-dim); }
+
+.exp-period {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.exp-current-badge {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  padding: 3px 8px;
+  border: 1px solid rgba(245, 197, 24, 0.35);
+  border-radius: 2px;
+  background: var(--yellow-dim);
+  align-self: flex-start;
+}
+
+.exp-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.exp-company {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.exp-role {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.exp-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-weight: 300;
+  margin-top: 8px;
+  max-width: 620px;
+}
+
+/* About section layout - updated for new structure */
+.about-bio-lead {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin-bottom: 0;
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.about-skills-col,
+.about-edu-col {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
 /* ── Responsive ────────────────────────────────────────────────────────────── */
 @media (max-width: 900px) {
   .about-layout {
@@ -1315,6 +1684,42 @@ section {
 
   .header-nav {
     display: none;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-stats-panel {
+    flex-direction: row;
+    min-width: unset;
+  }
+
+  .hero-stat-item {
+    flex: 1;
+    padding: 16px 12px;
+  }
+
+  .stat-value {
+    font-size: 2rem;
+  }
+
+  .hero-stat-divider {
+    width: 1px;
+    height: auto;
+  }
+
+  .exp-item {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .exp-left {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
   }
 }
 
@@ -1349,5 +1754,28 @@ section {
 
   .vlt-image-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero-stats-panel {
+    flex-direction: column;
+  }
+
+  .hero-stat-divider {
+    width: auto;
+    height: 1px;
+  }
+
+  .brands-strip {
+    flex-direction: column;
+  }
+
+  .brands-strip-label {
+    flex-direction: row;
+    gap: 12px;
+    padding: 12px 20px;
+  }
+
+  .brand-item {
+    padding: 14px 24px;
   }
 }

@@ -62,6 +62,13 @@ export interface TranslationStrings {
     tagline: string;
     ctaWork: string;
     ctaDev: string;
+    stat1Value: string;
+    stat1Label: string;
+    stat2Value: string;
+    stat2Label: string;
+    stat3Value: string;
+    stat3Label: string;
+    brandsLabel: string;
   };
   about: {
     title: string;
@@ -72,6 +79,7 @@ export interface TranslationStrings {
     education: string[];
     langTitle: string;
     langs: string[];
+    experienceTitle: string;
   };
   work: {
     title: string;
