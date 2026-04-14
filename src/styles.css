@@ -268,7 +268,7 @@ section {
 
 .hero-inner {
   width: 100%;
-  padding: 80px 48px;
+  padding: 40px 48px 48px;
   position: relative;
   z-index: 1;
 }
@@ -305,11 +305,11 @@ section {
 
 .hero-name {
   font-family: var(--font-display);
-  font-size: clamp(4rem, 10vw, 9rem);
+  font-size: clamp(3.5rem, 8vw, 7.5rem);
   font-weight: 900;
   line-height: 0.92;
   letter-spacing: -0.03em;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .hero-name .line2 {
@@ -322,7 +322,7 @@ section {
   display: flex;
   align-items: center;
   gap: 0;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
   flex-wrap: wrap;
 }
 
@@ -350,11 +350,11 @@ section {
 }
 
 .hero-tagline {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 300;
   color: var(--text-muted);
   max-width: 520px;
-  margin-bottom: 48px;
+  margin-bottom: 32px;
   line-height: 1.65;
 }
 
@@ -1310,8 +1310,8 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 28px;
-  margin-bottom: 48px;
+  padding-bottom: 16px;
+  margin-bottom: 28px;
   border-bottom: 1px solid var(--border-strong);
 }
 
@@ -1354,41 +1354,26 @@ section {
 
 /* Brands horizontal strip below CTAs */
 .hero-brands-strip {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  margin-top: 40px;
-  padding-top: 32px;
+  margin-top: 36px;
+  padding-top: 28px;
   border-top: 1px solid var(--border);
-  flex-wrap: wrap;
-}
-
-.hero-brands-strip-label {
-  font-family: var(--font-mono);
-  font-size: 0.6rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--text-dim);
-  white-space: nowrap;
-  flex-shrink: 0;
 }
 
 .hero-brands-logos {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 40px;
   flex-wrap: wrap;
 }
 
 .hero-brand-logo {
-  height: 26px;
-  width: auto;
-  max-width: 120px;
+  width: 96px;
+  height: 28px;
   object-fit: contain;
+  object-position: left center;
   opacity: 0.55;
   transition: opacity var(--transition);
-  filter: brightness(0) invert(1);
+  mix-blend-mode: screen;
 }
 
 .hero-brand-logo:hover {

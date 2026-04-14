@@ -51,7 +51,6 @@ export const Hero: React.FC<HeroProps> = ({ t }) => {
 
         {/* Brand logos — horizontal strip below CTAs */}
         <div className="hero-brands-strip">
-          <span className="hero-brands-strip-label">{t.hero.brandsLabel}</span>
           <div className="hero-brands-logos">
             {brands.map((brand) => (
               <img
