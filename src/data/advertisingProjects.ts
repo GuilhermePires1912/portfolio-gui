@@ -16,11 +16,11 @@ export const advertisingProjects: AdvertisingProject[] = [
     categoryPt: 'Trailer & Campanha',
     categoryEn: 'Trailer & Campaign',
     descriptionPt:
-      'Campanha completa da terceira temporada de Os Outros - série original Globoplay. Desenvolvemos trailers, cortes sociais e uma ação especial com os ex-BBBs Jonas e Maxiane.',
+      'Campanha completa da terceira temporada de Os Outros - série original Globoplay. Foram desenvolvidos trailers, cortes para social e uma ação especial com os ex-BBBs Jonas e Maxiane.',
     descriptionEn:
-      'Full campaign for the third season of Os Outros - Globoplay original series. We delivered trailers, social cuts, and a special activation with ex-BBBs Jonas and Maxiane.',
+      'Full campaign for the third season of Os Outros - Globoplay original series. We delivered trailers, social cuts and a special activation with ex-BBBs Jonas and Maxiane.',
     thumbnail: '/images/osoutros-kv.jpg',
-    thumbnailPosition: 'center 20%',
+    thumbnailPosition: 'center 30%',
     kvImages: [
       '/images/osoutros-kv.jpg',
       '/images/osoutros-dupla-01_120x68cm.png',
@@ -42,9 +42,9 @@ export const advertisingProjects: AdvertisingProject[] = [
       titlePt: 'Ação Especial - Jonas & Mariane',
       titleEn: 'Special Activation - Jonas & Mariane',
       descriptionPt:
-        'Ação especial com os protagonistas da série para ativação em evento. Um conteúdo exclusivo e intimista que gerou grande repercussão nas redes sociais da Globoplay.',
+        'Ação especial com os ex-BBBs para ativação segmentada em TV e redes. A ação gerou mais de 7M de views orgânicos.',
       descriptionEn:
-        'Special activation featuring the lead actors in a live event setting. Exclusive, intimate content that generated significant reach across Globoplay social channels.',
+        'Special campaign featuring former Big Brother Brazil contestants for targeted TV and social media activation. The initiative generated over 7M organic views.',
       images: ['/images/osoutros-jonas.jpg'],
       videos: ['https://litter.catbox.moe/b9jwf1.mp4'], // Ação especial Jonas & Mariane
     },
@@ -120,11 +120,15 @@ export const advertisingProjects: AdvertisingProject[] = [
     categoryPt: 'Trailer & Social',
     categoryEn: 'Trailer & Social',
     descriptionPt:
-      'Segunda temporada da série de comédia romântica original Globoplay. Trailers de lançamento, cortes performance e social media - incluindo o formato vertical de maior impacto da temporada.',
+      'Segunda temporada do reality original Globoplay. Trailers de lançamento, cortes performance e social media - incluindo o formato vertical de maior impacto da temporada.',
     descriptionEn:
-      'Second season of the Globoplay original romantic comedy series. Launch trailers, performance cuts and social media - including the most impactful vertical format of the season.',
-    thumbnail: '/images/minhamae-kv.jpg',
-    kvImages: ['/images/minhamae-kv.jpg', '/images/minhamae-kv2.jpg'],
+      'Second season of the Globoplay Original reality. Launch trailers, performance cuts and social media - including the most impactful vertical format of the season.',
+    thumbnail: '/images/minhamae-kv3.jpg',
+    kvImages: [
+      '/images/minhamae-kv3.jpg',
+      '/images/minhamae-kv.jpg',
+      '/images/minhamae-kv2.jpg',
+    ],
     principalVideos: ['https://litter.catbox.moe/mlznxa.mp4'], // GPLAY MMCSP T2 30s
     socialVideos: [
       'https://litter.catbox.moe/nq68bk.mp4', // MMCSP 9x16 vertical
@@ -142,7 +146,7 @@ export const advertisingProjects: AdvertisingProject[] = [
     categoryPt: 'Trailer & Teaser',
     categoryEn: 'Trailer & Teaser',
     descriptionPt:
-      'Campanha da quarta temporada de A Divisão - série policial original Globoplay. Teasers matemáticos conceituais para redes sociais e trailer de lançamento.',
+      'Campanha da quarta temporada de A Divisão - série policial original Globoplay. Teasers com conceitos matemáticos para redes sociais e trailer de lançamento.',
     descriptionEn:
       'Campaign for the fourth season of A Divisão - Globoplay original police drama. Conceptual math-themed social teasers and launch trailer.',
     thumbnail: '/images/a-divisao-kv-horiz.jpg',
@@ -196,7 +200,7 @@ export const advertisingProjects: AdvertisingProject[] = [
     categoryPt: 'Trailer & Musical',
     categoryEn: 'Trailer & Music',
     descriptionPt:
-      'Campanha do especial musical Raul Seixas - conteúdo original Globoplay. Trailer épico em telão, versões de 60s para TV e social, além de cortes verticais para redes.',
+      'Campanha do especial musical Raul Seixas - conteúdo original Globoplay. Trailer épico, versões longas para TV e social, além de cortes verticais para redes.',
     descriptionEn:
       'Campaign for the Raul Seixas musical special - Globoplay original content. Epic widescreen trailer, 60s TV and social versions, plus vertical cuts for social media.',
     thumbnail: '/images/raul-kv.jpg',

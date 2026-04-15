@@ -10,7 +10,7 @@ export const ContactSection: React.FC<ContactProps> = ({ t }) => {
     <section id="contact" className="contact-section">
       <div className="container">
         <div className="contact-inner">
-          <div>
+          <div className="contact-left">
             <h2 className="contact-headline">
               {t.contact.title}
             </h2>
@@ -37,7 +37,7 @@ export const ContactSection: React.FC<ContactProps> = ({ t }) => {
             </div>
           </div>
 
-          <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
+          <div className="contact-actions">
             <a
               href="mailto:guipires1912@hotmail.com"
               className="btn btn-primary"

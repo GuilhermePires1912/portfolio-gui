@@ -119,12 +119,43 @@ const VideoLightbox: React.FC<VideoLightboxProps> = ({ src, vertical, onClose })
   );
 };
 
+// ── Image Lightbox ───────────────────────────────────────────────────────────
+interface ImageLightboxProps {
+  src: string;
+  alt: string;
+  onClose: () => void;
+}
+
+const ImageLightbox: React.FC<ImageLightboxProps> = ({ src, alt, onClose }) => {
+  const backdropRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [onClose]);
+
+  return (
+    <div
+      className="ilb-backdrop"
+      ref={backdropRef}
+      onClick={(e) => { if (e.target === backdropRef.current) onClose(); }}
+    >
+      <div className="ilb-container">
+        <button className="vlb-close" onClick={onClose} aria-label="Fechar">✕</button>
+        <img src={src} alt={alt} className="ilb-img" />
+      </div>
+    </div>
+  );
+};
+
 // ── Modal ────────────────────────────────────────────────────────────────────
 export const ProjectModal: React.FC<ProjectModalProps> = ({
   project, t, language, onClose
 }) => {
   const backdropRef = useRef<HTMLDivElement>(null);
   const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
+  const [imageLightbox, setImageLightbox] = useState<{ src: string; alt: string } | null>(null);
   const title = language === 'pt' ? project.titlePt : project.titleEn;
   const category = language === 'pt' ? project.categoryPt : project.categoryEn;
   const description = language === 'pt' ? project.descriptionPt : project.descriptionEn;
@@ -157,13 +188,24 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
         onClose={() => setLightboxSrc(null)}
       />
     )}
+    {imageLightbox && (
+      <ImageLightbox
+        src={imageLightbox.src}
+        alt={imageLightbox.alt}
+        onClose={() => setImageLightbox(null)}
+      />
+    )}
     <div className="modal-backdrop" ref={backdropRef} onClick={handleBackdropClick}>
       <div className="modal" role="dialog" aria-modal="true" aria-label={title}>
         <button className="modal-close" onClick={onClose} aria-label={t.work.close}>✕</button>
 
         {/* Hero KV */}
-        <div className="modal-hero">
-          <img src={project.thumbnail} alt={title} loading="lazy" />
+        <div className={`modal-hero modal-hero--${project.slug}`}>
+          <img
+            src={project.thumbnail}
+            alt={title}
+            loading="lazy"
+          />
           <div className="modal-hero-overlay" />
         </div>
 
@@ -192,7 +234,9 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
               {project.specialAction.images.length > 0 && (
                 <div className="special-image-grid">
                   {project.specialAction.images.map((img, i) => (
-                    <img key={i} src={img} alt={`Special ${i + 1}`} loading="lazy" />
+                    <div key={i} className={`special-img-wrap special-img-wrap-${i}`}>
+                      <img src={img} alt={`Special ${i + 1}`} loading="lazy" />
+                    </div>
                   ))}
                 </div>
               )}
@@ -222,7 +266,9 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
               {project.vltProject.images.length > 0 && (
                 <div className="vlt-image-grid">
                   {project.vltProject.images.map((img, i) => (
-                    <img key={i} src={img} alt={`VLT ${i + 1}`} loading="lazy" />
+                    <div key={i} className={`vlt-img-wrap vlt-img-wrap-${i}`}>
+                      <img src={img} alt={`VLT ${i + 1}`} loading="lazy" />
+                    </div>
                   ))}
                 </div>
               )}
@@ -269,7 +315,13 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
               <div className="modal-section-title">◉ {t.work.kvGallery}</div>
               <div className="kv-gallery">
                 {project.kvImages.map((img, i) => (
-                  <img key={i} src={img} alt={`KV ${i + 1}`} loading="lazy" />
+                  <div
+                    key={i}
+                    className={`kv-img-wrap kv-img-wrap-${i}`}
+                    onClick={() => setImageLightbox({ src: img, alt: `KV ${i + 1}` })}
+                  >
+                    <img src={img} alt={`KV ${i + 1}`} loading="lazy" />
+                  </div>
                 ))}
               </div>
             </div>
