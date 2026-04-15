@@ -1,11 +1,11 @@
-# Ilana Sidi — Portfolio
-
 ## Stack
+
 - React 18 + TypeScript (TSX)
 - Vite
 - CSS Variables (sem dependências de UI)
 
 ## Estrutura
+
 ```
 src/
 ├── components/
@@ -59,15 +59,19 @@ Edite o arquivo `src/data/videos.ts`. Para cada vídeo, preencha:
 ```
 
 ### Opções de hospedagem de thumbnails e GIFs
+
 - **Cloudinary** (recomendado) — grátis, CDN global, aceita conversão de vídeo para GIF
 - **Google Drive** — use o link direto de visualização
 - **Vimeo** — a API do Vimeo retorna thumbnails automaticamente
 
 ### Converter clipes para GIF (para preview no hover)
+
 Use [ezgif.com](https://ezgif.com) ou [Cloudinary](https://cloudinary.com) para converter pequenos clipes em GIF otimizado de 3-5 segundos.
 
 ## Deploy
+
 ```bash
 npm run build
 ```
+
 A pasta `dist/` pode ser publicada em Vercel, Netlify ou GitHub Pages.

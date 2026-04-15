@@ -62,9 +62,10 @@ export const advertisingProjects: AdvertisingProject[] = [
       'Campanha da série original Globoplay Turma da Monica Origens, incluindo trailers, cortes sociais e o projeto especial de ativação no VLT do Rio de Janeiro - tematizado com os personagens da série.',
     descriptionEn:
       'Campaign for the Globoplay original series Turma da Monica Origens, including trailers, social cuts and the special VLT Rio de Janeiro activation project - themed with the series characters.',
-    thumbnail: '/images/monica-kv.avif',
+    thumbnail: '/images/monica-kv-horiz.jpg',
     kvImages: [
-      '/images/monica-kv.avif',
+      '/images/monica-kv-horiz.jpg',
+      '/images/monica-kv-vert.jpg',
       '/images/monica-vlt1.jpg',
       '/images/monica-vlt2.jpg',
     ],
