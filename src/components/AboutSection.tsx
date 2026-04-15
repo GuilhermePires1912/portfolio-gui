@@ -6,7 +6,7 @@ interface AboutProps {
   language: Language;
 }
 
-export const AboutSection: React.FC<AboutProps> = ({ t, language }) => {
+export const AboutSection: React.FC<AboutProps> = ({ t }) => {
   return (
     <section id="about" className="about-section">
       <div className="container">
