@@ -1342,12 +1342,17 @@ section {
 /* ── About Section ─────────────────────────────────────────────────────────── */
 .about-section {
   background: var(--bg);
+  padding-top: 56px;
+}
+
+.about-section .section-header {
+  margin-bottom: 32px;
 }
 
 .about-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  gap: 0px;
   align-items: start;
 }
 
@@ -1356,7 +1361,7 @@ section {
   color: var(--text-muted);
   line-height: 1.8;
   font-weight: 300;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 }
 
 .about-bio strong {
@@ -1791,13 +1796,13 @@ section {
 .about-bio-lead {
   font-size: 1.1rem;
   max-width: 800px;
-  margin-bottom: 0;
+  margin-bottom: 48px;
 }
 
 .about-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 64px;
+  gap: 34px;
   align-items: start;
 }
 
@@ -1812,7 +1817,7 @@ section {
 @media (max-width: 900px) {
   .about-layout {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 80px;
   }
 
   .projects-featured {

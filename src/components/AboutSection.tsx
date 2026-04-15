@@ -1,6 +1,5 @@
 import React from 'react';
 import { TranslationStrings, Language } from '../types';
-import { experiences } from '../data/experience';
 
 interface AboutProps {
   t: TranslationStrings;
@@ -8,8 +7,6 @@ interface AboutProps {
 }
 
 export const AboutSection: React.FC<AboutProps> = ({ t, language }) => {
-  const exp = experiences[language];
-
   return (
     <section id="about" className="about-section">
       <div className="container">
@@ -20,33 +17,6 @@ export const AboutSection: React.FC<AboutProps> = ({ t, language }) => {
 
         {/* Bio - full width lead */}
         <p className="about-bio about-bio-lead">{t.about.bio}</p>
-
-        {/* Experience timeline */}
-        <div className="exp-section">
-          <div className="exp-section-header">
-            <span className="exp-section-label">{t.about.experienceTitle}</span>
-          </div>
-          <div className="exp-list">
-            {exp.map((item, i) => (
-              <div className="exp-item" key={i}>
-                <div className="exp-left">
-                  <div className="exp-period-wrap">
-                    <span className={`exp-accent exp-accent-${item.accent}`} />
-                    <span className="exp-period">{item.period}</span>
-                  </div>
-                  {item.current && (
-                    <span className="exp-current-badge">● Atual</span>
-                  )}
-                </div>
-                <div className="exp-body">
-                  <div className="exp-company">{item.company}</div>
-                  <div className="exp-role">{item.role}</div>
-                  <div className="exp-desc">{item.description}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
 
         {/* Skills + Education two-column */}
         <div className="about-layout">

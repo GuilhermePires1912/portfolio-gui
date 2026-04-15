@@ -6,6 +6,7 @@ import { Hero } from './components/Hero';
 import { WorkSection } from './components/WorkSection';
 import { DevSection } from './components/DevSection';
 import { AboutSection } from './components/AboutSection';
+import { ExperienceSection } from './components/ExperienceSection';
 import { ContactSection } from './components/ContactSection';
 import { ProjectModal } from './components/ProjectModal';
 import { advertisingProjects } from './data/advertisingProjects';
@@ -26,6 +27,7 @@ const App: React.FC = () => {
 
       <main>
         <Hero t={t} />
+        <AboutSection t={t} language={language} />
         <WorkSection
           projects={advertisingProjects}
           t={t}
@@ -37,7 +39,7 @@ const App: React.FC = () => {
           t={t}
           language={language}
         />
-        <AboutSection t={t} language={language} />
+        <ExperienceSection t={t} language={language} />
         <ContactSection t={t} />
       </main>
 
